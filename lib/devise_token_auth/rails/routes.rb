@@ -43,7 +43,7 @@ module ActionDispatch::Routing
           parent:       nil
         )
 
-        devise_scope resource.underscore.to_sym do
+        devise_scope base_name.underscore.to_sym do
           # path to verify token validity
           get "#{full_path}/validate_token", controller: "#{token_validations_ctrl}", action: "validate_token"
 
