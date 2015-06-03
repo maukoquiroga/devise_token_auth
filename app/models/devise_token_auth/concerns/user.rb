@@ -205,24 +205,17 @@ module DeviseTokenAuth::Concerns::User
     return build_auth_header(token, client_id)
   end
 
-<<<<<<< HEAD
-=======
   # Only makes user confirmable if the module is included
->>>>>>> Enables the user to define which devise modules to use
   def confirmed?
     self.devise_modules.exclude?(:confirmable) || super
   end
 
-<<<<<<< HEAD
   def token_validation_response
     self.as_json(except: [
       :tokens, :created_at, :updated_at
     ])
   end
 
-
-=======
->>>>>>> Enables the user to define which devise modules to use
   protected
 
 
