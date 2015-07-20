@@ -34,14 +34,14 @@ module ActionDispatch::Routing
         full_path = "#{@scope[:path]}/#{opts[:at]}"
 
         # clear scope so controller routes aren't namespaced
-        @scope = ActionDispatch::Routing::Mapper::Scope.new(
-          path:         "",
-          shallow_path: "",
-          constraints:  {},
-          defaults:     {},
-          options:      {},
-          parent:       nil
-        )
+        # @scope = ActionDispatch::Routing::Mapper::Scope.new(
+        #   path:         "",
+        #   shallow_path: "",
+        #   constraints:  {},
+        #   defaults:     {},
+        #   options:      {},
+        #   parent:       nil
+        # )
 
         devise_scope base_name.underscore.to_sym do
           # path to verify token validity
